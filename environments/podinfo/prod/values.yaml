@@ -1,3 +1,6 @@
 env:
   APP_ENV: "prod"
   THEME_COLOR: "red"
+
+image:
+  tag: "0.1.1"
