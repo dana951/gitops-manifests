@@ -17,3 +17,6 @@ env:
   GIT_SHA: "unknown"
 
 resources: {}
+
+nodeSelector:
+  workload/node-group: podinfo-app
