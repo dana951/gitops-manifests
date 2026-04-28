@@ -1,6 +1,6 @@
 # gitops-manifests
 
-GitOps repository that defines the desired Kubernetes workload state for the `podinfo` application.
+GitOps repository that defines the desired Kubernetes workload state for the [`podinfo`](https://github.com/dana951/app-source.git) application.
 
 This repository is part of the larger [`eks-gitops-platform`](https://github.com/dana951/eks-gitops-platform) portfolio.  
 Its responsibility is to hold deployable Helm configuration that Argo CD continuously reconciles to EKS.
