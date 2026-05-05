@@ -9,8 +9,8 @@ Its responsibility is to hold deployable Helm configuration that Argo CD continu
 
 - Acts as the **source of truth** for application deployment state.
 - Stores a reusable Helm chart for `podinfo`.
-- Stores environment overlays (`dev`, `qa`, `staging`, `prod`) with per-environment values.
-- Receives image tag updates from the CI pipeline and exposes them to Argo CD for rollout.
+- Stores environment overlays (`staging`, `prod`) with per-environment values.
+- Receives image tag updates from the CI/CD pipeline and exposes them to Argo CD for rollout.
 
 ## Repository Layout
 
@@ -27,8 +27,7 @@ gitops-manifests/
 │           └── service.yaml
 └── environments/
     └── podinfo/
-        ├── dev/values.yaml
-        ├── qa/values.yaml
+        ├── qa/values.yaml    # Created dynamically in a CI side branch during PR testing
         ├── staging/values.yaml
         └── prod/values.yaml
 ```
@@ -51,7 +50,6 @@ Key configurable settings:
 
 Each environment has a dedicated `values.yaml` under `environments/podinfo/`:
 
-- `dev` - early validation
 - `qa` - test verification
 - `staging` - pre-production validation
 - `prod` - production release
@@ -68,7 +66,7 @@ From the repository root:
 ```bash
 # Render manifests for an environment
 helm template podinfo ./charts/podinfo \
-  -f ./environments/podinfo/dev/values.yaml
+  -f ./environments/podinfo/staging/values.yaml
 
 # Optional: validate chart structure
 helm lint ./charts/podinfo
