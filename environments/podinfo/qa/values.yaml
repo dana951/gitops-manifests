@@ -1,6 +1,0 @@
-env:
-  APP_ENV: "qa"
-  THEME_COLOR: "purple"
-
-image:
-  tag: "0.1.2-amd"
