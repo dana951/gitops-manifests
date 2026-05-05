@@ -27,7 +27,7 @@ gitops-manifests/
 │           └── service.yaml
 └── environments/
     └── podinfo/
-        ├── qa/values.yaml    # Created dynamically in a CI side branch during PR testing
+        ├── qa/values.yaml    # Created dynamically in a side branch during CI/CD PR validation flow
         ├── staging/values.yaml
         └── prod/values.yaml
 ```
