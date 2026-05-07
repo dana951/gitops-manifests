@@ -50,7 +50,7 @@ Key configurable settings:
 
 Each environment has a dedicated `values.yaml` under `environments/podinfo/`:
 
-- `pr-<id>-<short-sha>` - test verification (preview environment - a short-lived, isolated ephemeral environment)
+- `pr-<id>-<short-sha>` - test verification preview environment (short-lived, isolated ephemeral env)
 - `staging` - pre-production validation
 - `prod` - production release
 
