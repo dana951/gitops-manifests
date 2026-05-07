@@ -27,7 +27,7 @@ gitops-manifests/
 │           └── service.yaml
 └── environments/
     └── podinfo/
-        ├── qa/values.yaml    # Created dynamically in a side branch during CI/CD PR validation flow
+        ├── pr-<id>-<short-sha>/values.yaml   # Created dynamically in a side branch during CI/CD PR validation flow
         ├── staging/values.yaml
         └── prod/values.yaml
 ```
@@ -50,7 +50,7 @@ Key configurable settings:
 
 Each environment has a dedicated `values.yaml` under `environments/podinfo/`:
 
-- `qa` - test verification
+- `pr-<id>-<short-sha>` - test verification (preview environment - a short-lived, isolated ephemeral environment)
 - `staging` - pre-production validation
 - `prod` - production release
 
