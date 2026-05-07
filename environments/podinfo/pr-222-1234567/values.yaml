@@ -1,0 +1,10 @@
+env:
+  APP_ENV: "pr-222-1234567"
+  THEME_COLOR: "orange"
+
+image:
+  tag: "0.1.2-amd"
+
+ephemeral:
+  enabled: true
+  namespace: "pr-222-1234567"
