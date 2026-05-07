@@ -1,0 +1,6 @@
+{{- if .Values.ephemeral.enabled}}
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: "{{.Values.ephemeral.namespace}}"
+{{- end }}
