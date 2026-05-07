@@ -20,3 +20,8 @@ resources: {}
 
 nodeSelector:
   workload/node-group: podinfo-app
+
+# For ephemeral CI/CD environments
+ephemeral:
+  enabled: false
+  namespace: ""
